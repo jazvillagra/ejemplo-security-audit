@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1493133106000" analysisTimestamp="1493134461496" release="">
+  <Project>
+    <Jar>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module3/src/main/java/com/example/module3/HelloWorld.java</Jar>
+    <Jar>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module3/target/classes/com/example/module3/HelloWorld.class</Jar>
+    <AuxClasspathEntry>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module3/target/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module3/target/sonar/findbugs/annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module3/target/sonar/findbugs/jsr305.jar</AuxClasspathEntry>
+    <WrkDir>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module3/target/sonar</WrkDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 25 Apr 2017 11:11:46 -0400" total_classes="1" referenced_classes="12" total_bugs="0" total_size="7" num_packages="1" java_version="1.8.0_121" vm_version="25.121-b13" cpu_seconds="1.71" clock_seconds="0.41" peak_mbytes="358.42" alloc_mbytes="2668.50" gc_seconds="0.01">
+    <FileStats path="com/example/module3/HelloWorld.java" bugCount="0" size="7"/>
+    <PackageStats package="com.example.module3" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.example.module3.HelloWorld" sourceFile="HelloWorld.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="113" invocations="328" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="4534" standardDeviationMircosecondsPerInvocation="575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="35" invocations="329" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="321" standardDeviationMircosecondsPerInvocation="48"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="27" invocations="12" avgMicrosecondsPerInvocation="2276" maxMicrosecondsPerInvocation="12020" standardDeviationMircosecondsPerInvocation="3387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="18" invocations="60" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="969" standardDeviationMircosecondsPerInvocation="240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="18" invocations="12" avgMicrosecondsPerInvocation="1536" maxMicrosecondsPerInvocation="7787" standardDeviationMircosecondsPerInvocation="2085"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="15" invocations="296" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="393" standardDeviationMircosecondsPerInvocation="74"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

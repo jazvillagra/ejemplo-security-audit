@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1493133106000" analysisTimestamp="1493134458260" release="">
+  <Project>
+    <Jar>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module1/src/main/java/com/example/module1/HelloWorld.java</Jar>
+    <Jar>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module1/target/classes/com/example/module1/HelloWorld.class</Jar>
+    <AuxClasspathEntry>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module1/target/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/struts/struts/1.2.8/struts-1.2.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/commons-digester/commons-digester/1.6/commons-digester-1.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/commons-collections/commons-collections/2.1/commons-collections-2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/commons-fileupload/commons-fileupload/1.0/commons-fileupload-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/commons-validator/commons-validator/1.1.4/commons-validator-1.1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/oro/oro/2.0.7/oro-2.0.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/antlr/antlr/2.7.2/antlr-2.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/xalan/xalan/2.5.1/xalan-2.5.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/com/sun/mail/javax.mail/1.4.4/javax.mail-1.4.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module1/target/sonar/findbugs/annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module1/target/sonar/findbugs/jsr305.jar</AuxClasspathEntry>
+    <WrkDir>/home/jvillagra/Desarrollo/dependency-check-sonar-plugin/examples/multi-module-maven-runner/module1/target/sonar</WrkDir>
+  </Project>
+  <BugInstance type="CIPHER_INTEGRITY" priority="1" rank="5" abbrev="CIPINT" category="SECURITY" instanceHash="bdcb31727df6f28272fc10f6eb462810" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Cipher With No Integrity</ShortMessage>
+    <LongMessage>The cipher used does not provide an data integrity</LongMessage>
+    <Class classname="com.example.module1.HelloWorld" primary="true">
+      <SourceLine classname="com.example.module1.HelloWorld" start="7" end="16" sourcefile="HelloWorld.java" sourcepath="com/example/module1/HelloWorld.java">
+        <Message>At HelloWorld.java:[lines 7-16]</Message>
+      </SourceLine>
+      <Message>In class com.example.module1.HelloWorld</Message>
+    </Class>
+    <Method classname="com.example.module1.HelloWorld" name="main" signature="([Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="com.example.module1.HelloWorld" start="11" end="16" startBytecode="0" endBytecode="165" sourcefile="HelloWorld.java" sourcepath="com/example/module1/HelloWorld.java"/>
+      <Message>In method com.example.module1.HelloWorld.main(String[])</Message>
+    </Method>
+    <SourceLine classname="com.example.module1.HelloWorld" primary="true" start="14" end="14" startBytecode="63" endBytecode="63" sourcefile="HelloWorld.java" sourcepath="com/example/module1/HelloWorld.java">
+      <Message>At HelloWorld.java:[line 14]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ECB_MODE" priority="1" rank="5" abbrev="SECECB" category="SECURITY" instanceHash="8f8f6335e1a637b9f95f3f38e1e48929" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>ECB Mode Unsafe</ShortMessage>
+    <LongMessage>The cipher chosen uses ECB mode, which provides poor confidentiality for encrypted data.</LongMessage>
+    <Class classname="com.example.module1.HelloWorld" primary="true">
+      <SourceLine classname="com.example.module1.HelloWorld" start="7" end="16" sourcefile="HelloWorld.java" sourcepath="com/example/module1/HelloWorld.java">
+        <Message>At HelloWorld.java:[lines 7-16]</Message>
+      </SourceLine>
+      <Message>In class com.example.module1.HelloWorld</Message>
+    </Class>
+    <Method classname="com.example.module1.HelloWorld" name="main" signature="([Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="com.example.module1.HelloWorld" start="11" end="16" startBytecode="0" endBytecode="165" sourcefile="HelloWorld.java" sourcepath="com/example/module1/HelloWorld.java"/>
+      <Message>In method com.example.module1.HelloWorld.main(String[])</Message>
+    </Method>
+    <SourceLine classname="com.example.module1.HelloWorld" primary="true" start="14" end="14" startBytecode="63" endBytecode="63" sourcefile="HelloWorld.java" sourcepath="com/example/module1/HelloWorld.java">
+      <Message>At HelloWorld.java:[line 14]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="HARD_CODE_KEY" priority="1" rank="5" abbrev="SECHCK" category="SECURITY" instanceHash="2f1f130e203781b0e8f6ba17a00e9ab4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="321">
+    <ShortMessage>Hard Coded Key</ShortMessage>
+    <LongMessage>Hard coded cryptographic key found</LongMessage>
+    <Class classname="com.example.module1.HelloWorld" primary="true">
+      <SourceLine classname="com.example.module1.HelloWorld" start="7" end="16" sourcefile="HelloWorld.java" sourcepath="com/example/module1/HelloWorld.java">
+        <Message>At HelloWorld.java:[lines 7-16]</Message>
+      </SourceLine>
+      <Message>In class com.example.module1.HelloWorld</Message>
+    </Class>
+    <Method classname="com.example.module1.HelloWorld" name="main" signature="([Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="com.example.module1.HelloWorld" start="11" end="16" startBytecode="0" endBytecode="165" sourcefile="HelloWorld.java" sourcepath="com/example/module1/HelloWorld.java"/>
+      <Message>In method com.example.module1.HelloWorld.main(String[])</Message>
+    </Method>
+    <SourceLine classname="com.example.module1.HelloWorld" primary="true" start="13" end="13" startBytecode="57" endBytecode="57" sourcefile="HelloWorld.java" sourcepath="com/example/module1/HelloWorld.java">
+      <Message>At HelloWorld.java:[line 13]</Message>
+    </SourceLine>
+    <Method classname="javax.crypto.spec.SecretKeySpec" name="&lt;init&gt;" signature="([BLjava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="javax.crypto.spec.SecretKeySpec" start="91" end="100" startBytecode="0" endBytecode="131" sourcefile="SecretKeySpec.java" sourcepath="javax/crypto/spec/SecretKeySpec.java"/>
+      <Message>Called method new javax.crypto.spec.SecretKeySpec(byte[], String)</Message>
+    </Method>
+    <Int value="2" role="Hard coded parameter number (in reverse order) is">
+      <Message>Hard coded parameter number (in reverse order) is 2</Message>
+    </Int>
+    <String value="8">
+      <Message>Value 8</Message>
+    </String>
+  </BugInstance>
+  <BugCategory category="SECURITY">
+    <Description>Security</Description>
+  </BugCategory>
+  <BugPattern type="CIPHER_INTEGRITY" abbrev="CIPINT" category="SECURITY">
+    <ShortDescription>Cipher With No Integrity</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+    The ciphertext produced is susceptible to alteration by an adversary. This mean that the cipher provides no way to detect that the 
+    data has been tampered with. If the ciphertext can be controlled by an attacker, it could be altered without detection.
+</p>
+<p>
+    The solution is to used a cipher that includes a Hash based Message Authentication Code (HMAC) to sign the data. Combining a HMAC function to the 
+    existing cipher is prone to error <sup><a href="http://www.thoughtcrime.org/blog/the-cryptographic-doom-principle/">[1]</a></sup>. Specifically,
+    it is always recommended that you be able to verify the HMAC first, and only if the data is unmodified, do you then perform any cryptographic
+    functions on the data.
+</p>
+<p>
+    <b>Code at risk:</b><br/>
+    <i>AES in CBC mode</i><br/>
+
+    <pre>Cipher c = Cipher.getInstance("AES/CBC/PKCS5Padding");
+c.init(Cipher.ENCRYPT_MODE, k, iv);
+byte[] cipherText = c.doFinal(plainText);</pre>
+    <br/>
+    <i>Triple DES with ECB mode</i><br/>
+
+<pre>Cipher c = Cipher.getInstance("DESede/ECB/PKCS5Padding");
+c.init(Cipher.ENCRYPT_MODE, k, iv);
+byte[] cipherText = c.doFinal(plainText);</pre>
+</p>
+<p>
+    <b>Solution:</b>
+    <pre>Cipher c = Cipher.getInstance("AES/GCM/NoPadding");
+c.init(Cipher.ENCRYPT_MODE, k, iv);
+byte[] cipherText = c.doFinal(plainText);</pre>
+</p>
+<p>
+In the example solution above, the GCM mode introduces an HMAC into the resulting encrypted data, providing integrity of the result.
+</p>
+<br/>
+<p>
+    <b>References</b><br/>
+    <a href="http://en.wikipedia.org/wiki/Authenticated_encryption">Wikipedia: Authenticated encryption</a><br/>
+    <a href="http://csrc.nist.gov/groups/ST/toolkit/BCM/modes_development.html#01">NIST: Authenticated Encryption Modes</a><br/>
+    <a href="http://www.thoughtcrime.org/blog/the-cryptographic-doom-principle/">Moxie Marlinspike's blog: The Cryptographic Doom Principle</a><br/>
+    <a href="http://cwe.mitre.org/data/definitions/353.html">CWE-353: Missing Support for Integrity Check</a>
+</p>
+
+        ]]></Details>
+  </BugPattern>
+  <BugPattern type="HARD_CODE_KEY" abbrev="SECHCK" category="SECURITY" cweid="321">
+    <ShortDescription>Hard Coded Key</ShortDescription>
+    <Details><![CDATA[
+            
+<p>
+Cryptographic keys should not be kept in the source code. The source code can be widely shared in an enterprise environment, and is
+certainly shared in open source. To be managed safely, passwords and secret keys should be stored in separate configuration files or keystores.
+(Hard coded passwords are reported separately by <i>Hard Coded Password</i> pattern)
+</p>
+<p>
+<p><b>Vulnerable Code:</b><br/>
+
+<pre>byte[] key = {1, 2, 3, 4, 5, 6, 7, 8};
+SecretKeySpec spec = new SecretKeySpec(key, "AES");
+Cipher aes = Cipher.getInstance("AES");
+aes.init(Cipher.ENCRYPT_MODE, spec);
+return aesCipher.doFinal(secretData);</pre> 
+</p>
+<br/>
+<p>
+<b>References</b><br/>
+<a href="http://cwe.mitre.org/data/definitions/321.html">CWE-321: Use of Hard-coded Cryptographic Key</a><br/>
+</p>
+
+        ]]></Details>
+  </BugPattern>
+  <BugPattern type="ECB_MODE" abbrev="SECECB" category="SECURITY">
+    <ShortDescription>ECB Mode Unsafe</ShortDescription>
+    <Details><![CDATA[
+            
+<p>An authentication cipher mode which provides better confidentiality of the encrypted data should be used instead of Electronic Codebook (ECB) mode, 
+which does not provide good confidentiality. Specifically, ECB mode produces the same output for the same input each time. So, 
+for example, if a user is sending a password, the encrypted value is the same each time. This allows an attacker to intercept 
+and replay the data.</p>
+<p>
+To fix this, something like Galois/Counter Mode (GCM) should be used instead.
+</p>
+<p>
+<b>Code at risk:</b>
+    <pre>Cipher c = Cipher.getInstance("AES/ECB/NoPadding");
+c.init(Cipher.ENCRYPT_MODE, k, iv);
+byte[] cipherText = c.doFinal(plainText);</pre>
+</p>
+<p>
+    <b>Solution:</b>
+    <pre>Cipher c = Cipher.getInstance("AES/GCM/NoPadding");
+c.init(Cipher.ENCRYPT_MODE, k, iv);
+byte[] cipherText = c.doFinal(plainText);</pre>
+</p>
+<br/>
+<p>
+<b>References</b><br/>
+<a href="http://en.wikipedia.org/wiki/Authenticated_encryption">Wikipedia: Authenticated encryption</a><br/>
+<a href="http://csrc.nist.gov/groups/ST/toolkit/BCM/modes_development.html#01">NIST: Authenticated Encryption Modes</a><br/>
+<a href="http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation#Electronic_codebook_.28ECB.29">Wikipedia: Block cipher modes of operation</a><br/>
+<a href="http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf">NIST: Recommendation for Block Cipher Modes of Operation</a>
+</p>
+
+        ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="SECHCK">
+    <Description>Hard Coded Key</Description>
+  </BugCode>
+  <BugCode abbrev="CIPINT">
+    <Description>Cipher with no integrity</Description>
+  </BugCode>
+  <BugCode abbrev="SECECB">
+    <Description>ECB Mode</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 25 Apr 2017 11:11:46 -0400" total_classes="1" referenced_classes="16" total_bugs="3" total_size="11" num_packages="1" java_version="1.8.0_121" vm_version="25.121-b13" cpu_seconds="8.54" clock_seconds="1.93" peak_mbytes="292.53" alloc_mbytes="2668.50" gc_seconds="0.02" priority_1="3">
+    <FileStats path="com/example/module1/HelloWorld.java" bugCount="3" size="11" bugHash="371917c60cabd4001937669941f54857"/>
+    <PackageStats package="com.example.module1" total_bugs="3" total_types="1" total_size="11" priority_1="3">
+      <ClassStats class="com.example.module1.HelloWorld" sourceFile="HelloWorld.java" interface="false" size="11" bugs="3" priority_1="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="333" invocations="376" avgMicrosecondsPerInvocation="885" maxMicrosecondsPerInvocation="26192" standardDeviationMircosecondsPerInvocation="2225"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="101" invocations="16" avgMicrosecondsPerInvocation="6365" maxMicrosecondsPerInvocation="21345" standardDeviationMircosecondsPerInvocation="6789"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="93" invocations="378" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="629" standardDeviationMircosecondsPerInvocation="82"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="67" invocations="67" avgMicrosecondsPerInvocation="1004" maxMicrosecondsPerInvocation="5919" standardDeviationMircosecondsPerInvocation="973"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="66" invocations="16" avgMicrosecondsPerInvocation="4180" maxMicrosecondsPerInvocation="16801" standardDeviationMircosecondsPerInvocation="5070"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="60" invocations="2" avgMicrosecondsPerInvocation="30293" maxMicrosecondsPerInvocation="58759" standardDeviationMircosecondsPerInvocation="28465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="51" invocations="343" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="2015" standardDeviationMircosecondsPerInvocation="292"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="42" invocations="38" avgMicrosecondsPerInvocation="1123" maxMicrosecondsPerInvocation="24448" standardDeviationMircosecondsPerInvocation="3981"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="35" invocations="16" avgMicrosecondsPerInvocation="2227" maxMicrosecondsPerInvocation="8631" standardDeviationMircosecondsPerInvocation="2257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="30" invocations="16" avgMicrosecondsPerInvocation="1911" maxMicrosecondsPerInvocation="9861" standardDeviationMircosecondsPerInvocation="2680"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="28" invocations="16" avgMicrosecondsPerInvocation="1806" maxMicrosecondsPerInvocation="12029" standardDeviationMircosecondsPerInvocation="2904"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="24" invocations="16" avgMicrosecondsPerInvocation="1561" maxMicrosecondsPerInvocation="7839" standardDeviationMircosecondsPerInvocation="1976"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="16" avgMicrosecondsPerInvocation="1349" maxMicrosecondsPerInvocation="4726" standardDeviationMircosecondsPerInvocation="1369"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

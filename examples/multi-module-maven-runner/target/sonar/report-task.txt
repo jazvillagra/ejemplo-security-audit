@@ -1,0 +1,5 @@
+projectKey=com.example:maven-multi-module-parent
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/com.example:maven-multi-module-parent
+ceTaskId=AVulv82Oi3DthnGVGdpF
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVulv82Oi3DthnGVGdpF
