@@ -24,7 +24,7 @@
     <properties>
         <dependency.check.report.dir>target/dependency-check</dependency.check.report.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sonar.host.url>http://localhost:9100/</sonar.host.url>
+        <sonar.host.url>http://10.1.0.25:9100/</sonar.host.url>
         <sonar.sources>src/main/java</sonar.sources>
         <sonar.projectKey>${project.groupId}:${project.artifactId}</sonar.projectKey>
         <sonar.dependencyCheck.reportPath>${dependency.check.report.dir}/dependency-check-report.xml</sonar.dependencyCheck.reportPath>
