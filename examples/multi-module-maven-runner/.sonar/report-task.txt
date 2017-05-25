@@ -1,5 +1,0 @@
-projectKey=multi-module-example
-serverUrl=http://localhost:9000
-dashboardUrl=http://localhost:9000/dashboard/index/multi-module-example
-ceTaskId=AVrSSAAxZYP2u3gstCm5
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AVrSSAAxZYP2u3gstCm5

@@ -1,87 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.sonarsource.parent</groupId>
-        <artifactId>parent</artifactId>
-        <version>40</version>
-    </parent>
-    <groupId>org.sonarsource.owasp</groupId>
-    <artifactId>sonar-dependency-check</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <groupId>com.example</groupId>
+    <artifactId>maven-multi-module-parent</artifactId>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
-    <name>Dependency-Check for SonarQube</name>
-    <description>Integrates Dependency-Check reports into SonarQube</description>
+
+    <modules>
+        <module>module1</module>
+        <module>module2</module>
+        <module>module3</module>
+    </modules>
+
+    <name>Multi-Module Maven Example</name>
+    <url>http://www.owasp.org/</url>
+    <description>Example multi-module Maven project that integrates Dependency-Check and SonarQube</description>
     <inceptionYear>2015</inceptionYear>
-
-    <properties>
-        <license.owner>Steve Springett</license.owner>
-        <license.mailto>steve.springett@owasp.org</license.mailto>
-    </properties>
-
     <organization>
         <name>OWASP</name>
-        <url>http://www.owasp.org</url>
     </organization>
 
-    <licenses>
-        <license>
-            <name>GNU LGPL 3</name>
-            <url>http://www.gnu.org/licenses/lgpl.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
+    <properties>
+        <dependency.check.report.dir>target/dependency-check</dependency.check.report.dir>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sonar.host.url>http://10.1.0.25:9100/</sonar.host.url>
+        <sonar.sources>src/main/java</sonar.sources>
+        <sonar.projectKey>${project.groupId}:${project.artifactId}</sonar.projectKey>
+        <sonar.dependencyCheck.reportPath>${dependency.check.report.dir}/dependency-check-report.xml</sonar.dependencyCheck.reportPath>
+        <!-- <sonar.branch>CAS_${sonar.profile}</sonar.branch> -->
+    </properties>
+    <profiles>
+        <profile>
+            <id>FindBugs-Security-Audit</id>
+            <properties>
+                <sonar.profile>FindBugs Security Audit</sonar.profile>
+            </properties>
+        </profile>
+        <profile>
+            <id>QualityProfileTwo</id>
+            <properties>
+                <sonar.profile>MyQualityProfile2</sonar.profile>
+            </properties>
+        </profile>
+    </profiles>
     <developers>
         <developer>
             <name>Steve Springett</name>
             <email>steve.springett@owasp.org</email>
-            <url>http://www.stevespringett.com</url>
+            <organization>OWASP</organization>
+            <organizationUrl>http://www.owasp.org/</organizationUrl>
+            <roles>
+                <role>Architect</role>
+                <role>Developer</role>
+            </roles>
         </developer>
     </developers>
 
-    <scm>
-      <connection>scm:git:https://github.com/stevespringett/dependency-check-sonar-plugin</connection>
-      <developerConnection>scm:git:https://github.com/stevespringett/dependency-check-sonar-plugin.git</developerConnection>
-      <url>https://github.com/stevespringett/dependency-check-sonar-plugin</url>
-      <tag>HEAD</tag>
-    </scm>
-
-    <issueManagement>
-      <system>GitHub</system>
-      <url>https://github.com/stevespringett/dependency-check-sonar-plugin/issues</url>
-    </issueManagement>
-
-    <ciManagement>
-      <system>Travis CI</system>
-      <url>https://travis-ci.org/stevespringett/dependency-check-sonar-plugin</url>
-    </ciManagement>
-
-    <!-- todo: remove this when SonarSource Forge hosting becomes a reality -->
-    <distributionManagement>
-        <repository>
-            <id>bintray</id>
-            <url>https://api.bintray.com/maven/stevespringett/owasp/dependency-check-sonar</url>
-        </repository>
-    </distributionManagement>
-
-    <modules>
-        <module>sonar-dependency-check-plugin</module>
-    </modules>
-
-    <!-- todo: remove this when SonarSource Forge hosting becomes a reality -->
     <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>${version.release.plugin}</version>
-                <configuration>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <useReleaseProfile>false</useReleaseProfile>
-                    <releaseProfiles>release</releaseProfiles>
-                </configuration>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>2.6</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.owasp</groupId>
+                    <artifactId>dependency-check-maven</artifactId>
+                    <version>1.4.5</version>
+                    <configuration>
+                        <format>XML</format>
+                        <outputDirectory>${dependency.check.report.dir}</outputDirectory>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
 </project>

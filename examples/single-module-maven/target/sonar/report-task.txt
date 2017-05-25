@@ -1,5 +1,0 @@
-projectKey=com.example:maven-single-module
-serverUrl=http://localhost:9000
-dashboardUrl=http://localhost:9000/dashboard/index/com.example:maven-single-module
-ceTaskId=AVrSyxvioYjSltE_LyTO
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AVrSyxvioYjSltE_LyTO
